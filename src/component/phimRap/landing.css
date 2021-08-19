@@ -1,0 +1,134 @@
+.landing{
+    max-width: 1290px;
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+    margin: auto;
+    padding: 0 20px;
+    margin-top: 50px;
+}
+
+.landing-img{
+    width: 350px;
+    height: 500px;
+    position: relative;
+}
+.landing .landing-title{
+    text-align: left;
+
+    margin-bottom:30px ;
+    color: #f1b722;
+}
+
+.phimRap{
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    transition: all 0.5s ease-out;
+    margin-bottom: 30px;
+    
+}
+.card{
+    min-width: 25%;
+    overflow: hidden;
+    padding: 5px;
+   margin: 5px;
+    position: relative;
+    transition: linear 0.3s ease-out;
+    box-shadow: 0 0 12px black;
+    border-radius: 10px;
+}
+
+.card img{
+    width: 100%;
+    border-radius: 10px;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 0 12px black;
+}
+.card .card-info{
+    position: absolute;
+    display: flex;
+    height: 70%;
+    bottom: 0;
+    left: 0;
+    background: #0c2738;
+    width: 100%;
+    display: block;
+    transition: all 0.5s linear;
+    cursor: pointer;
+    opacity: 0.87;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.card-info h2{
+    font-size: 160%;
+    color: white;
+    font-weight: 300;
+    font-family: 'Otomanopee One', sans-serif;
+    padding: 20px 20px;
+}
+.card-info p{
+    font-family:  'Libre Baskerville', serif;
+    color: white;
+
+}
+.card h3{
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    color: whitesmoke;
+    font-family: 'Otomanopee One', sans-serif;
+    padding: 10px 10px;
+}
+.card-info a{
+    text-decoration: none;
+border: transparent;
+border: transparent;
+margin: auto;
+padding: 10px;
+border-radius: 5px;
+width: 50%;
+background: rgb(56,152,236);
+color: white;
+-webkit-transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
+transition: all 0.4s cubic-bezier(.5, .24, 0, 1);
+}
+.card-info a:hover::after{
+    width: 100%;
+    background: yellowgreen;
+}
+
+.phimRap .prev{
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    font-size: 50px;
+    opacity: 0.2;
+    border: transparent;
+    color: white;
+}
+.phimRap .next{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    font-size: 50px;
+    opacity: 0.2;
+    border: transparent;
+    color: white;
+}
+.prev:hover, .next:hover{
+    color: goldenrod;
+}
+@media (max-width:720px){
+    .card{
+        min-width: 50%;
+    }
+    .card .card-info h2{
+        font-size: 70%;
+    }
+ 
+}
+
+/* ----------------phimel */

@@ -1,0 +1,265 @@
+.home{
+    display: flex;
+    flex-direction: column;
+    animation: expand .8s ease forwards;
+    transition: all .8s ease;
+}
+@keyframes expand {
+    0% {
+      transform: translateX(1400px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+.search{
+    margin: auto;
+    width: 100%;
+    position: fixed;
+    top: 70px;
+    opacity: 0.9;
+    height: 80%;
+  z-index: 999;
+    margin-bottom: 50px;  
+    background: #0c2738;
+    animation: search 0.4s ease-out forwards;
+    border: none;
+    overflow: hidden;
+    transition: all 0.4s ease-out;
+    border-bottom: 1px solid black;
+}
+.search input::placeholder{
+  color: #aaa;
+  font-size: 12px;
+}
+.card-search{
+  display: flex;
+  margin: 30px;
+ 
+  padding: 10px;
+  height: 150px;
+}
+.card-search img{
+  width: 120px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.search-box{
+  margin: 10px;
+  padding: 20px;
+}
+.search-box h4{
+  color: goldenrod;
+  text-align: left;
+}
+.search-box h5{
+  color: white;
+  text-align: left;
+  margin-bottom: 12px;
+}
+.search-box a{
+  text-align: left;
+  background: rgb(140, 189,232);
+  padding: 10px 7px;
+  text-decoration: none;
+  color: white;
+  border-radius: 5px;
+}
+
+@keyframes search {
+    0% {
+      transform: translateX(1400px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+.search input{
+    width: 50%;
+    padding: 6px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 1px solid rgb(140, 189,232);
+    outline: none;
+    text-align: left;
+    color: white;
+}
+.search button{
+    padding: 6px;
+    margin: auto;
+   position: absolute;
+   top: 0;
+   right: 24%;
+   outline: transparent;
+   border: 1px solid rgb(140, 189,232);
+   border-top-right-radius: 5px;
+   border-bottom-right-radius: 5px;
+   background: rgb(56,152,236);
+   color: white;
+   letter-spacing: 1px;
+   font-family: 'Otomanopee One', sans-serif;
+
+}
+.search .scroll-top{
+  font-size: 50px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  color: goldenrod;
+}
+.main-page{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    width: 100%;
+  
+  
+}
+@keyframes main {
+    0% {
+      transform: translateX(1400px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+.phim-movie{
+    margin: auto;
+    margin-top: 20px;
+    animation: main 1s ease forwards;
+}
+.card-phim {
+    height: 250px;
+    width: 200px;
+    padding: 10px 20px;
+    margin: 5px;
+    
+   overflow: hidden;
+   box-shadow: 0 0 10px black;
+   border-radius: 10px;
+   position: relative;
+
+  }
+
+  
+ 
+  .card-phim img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+ 
+  .card-phim .info-phim{
+    position: absolute;
+    display: flex;
+    height: 70%;
+    left: 0;
+    bottom: 0;
+    background: #0c2738;
+    width: 100%;
+    display: block;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    opacity: 0.87;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+  }
+
+  
+  .info-phim h2{
+    font-size: 110%;
+    color: white;
+    padding: 10px 10px;
+
+    font-family: 'Otomanopee One', sans-serif;
+}
+.info-phim p{
+    font-family:  'Libre Baskerville', serif;
+    color: white;
+
+}
+
+.info-phim a{
+    text-decoration: none;
+border: transparent;
+border: transparent;
+margin: auto;
+padding: 10px;
+border-radius: 5px;
+width: 50%;
+background: rgb(56,152,236);
+color: white;
+}
+
+/* -------------------pagination--------------------------- */
+.paginationPhim{
+    margin-top: 20px;
+    width: 100%;
+    height: 40px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+.paginationPhim a{
+    padding: 5px;
+    margin: 6px;
+    border-radius: 5px;
+    border: 1px solid #6e6f80;
+    color: #a0a0aa;
+    cursor: pointer;
+}
+.paginationPhim a:hover{
+    color: white;
+    background-color: goldenrod;
+}
+.paginationActivePhim a {
+    color: white;
+    background-color: goldenrod;
+  }
+
+  @media (max-width: 720px){
+      .paginationPhim a{
+          margin: 2px;
+          padding: 3px;
+      }
+      .card-phim{
+          width: 175px;
+      }
+      .info-phim h2{
+          font-size:70%;
+          width: 100%;
+          flex-wrap: wrap;
+          text-align: left;
+          text-align: center;
+          padding: 10px;
+          
+      }
+      .info-phim a{
+            padding:5px;
+            font-size: 13px;
+      }
+      .info-phim p{
+          font-size: 12px;
+      }
+      .search {
+          width:100%;
+          
+      }
+      .search input{
+          width: 70%;
+      }
+      .search button{
+          right:10%;
+      }
+      .search .card-search{
+        margin: 0;
+        padding:10px;
+      }
+  }
